@@ -1,4 +1,6 @@
 import './App.css';
+import logo from './logo.png';
+
 
 function HeaderMenu() {
   return (
@@ -11,9 +13,31 @@ function HeaderMenu() {
   );
 };
 
+function AppHeader() {
+  return (
+    <header style={{ display: 'flex', alignItems: 'center' }}>
+      <div style={{ flex: 1 }}>
+        <img src={logo} alt="Logo" style={{ height: 100 }} />
+      </div>
+      <div>
+        <div style={{ flex: 1 }}>
+          <HeaderMenu />
+        </div>
+        <div style={{ flex: 2 }}>
+          <form style={{ display: 'flex', alignItems: 'center' }}>
+            <input type="text" placeholder="Search" style={{ flex: 1, marginRight: 10 }} />
+            <button type="submit">Search</button>
+          </form>
+        </div>
+      </div>
+    </header>
+  );
+}
+
+
 function App() {
   return (
-    <HeaderMenu/>    
+    <AppHeader/>    
   );
 }
 
