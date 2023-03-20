@@ -63,10 +63,24 @@ function AppHeader() {
   );
 }
 
+function Panel({imageSrc,description}) {
+  return(
+      <div style={{ display: 'flex', alignItems: 'center',border: '1px solid rgba(0, 0, 0,0.25)'}}>
+        <div style={{ flex: 1,alignItems: 'center',border: '1px solid rgba(0, 0, 0,0.25)' }}>
+          <img src={imageSrc} style={{ height: 300 }} />
+        </div>
+        <div style={{ flex: 2 }}>
+          {description}
+        </div>
+          
+      </div>
+  );
+}
 
 function App() {
+  const LoremIpsum = "Lorem ipsum dolor sit amet, est ea fabulas scaevola. Doming scribentur ei ius. Tamquam imperdiet efficiendi duo eu. Eius volutpat sed cu, quem deserunt intellegam mel ex, ea has stet simul."
   return (
-    <SideBar/>    
+    <Panel imageSrc = {logo} description = {LoremIpsum}/>    
   );
 }
 
