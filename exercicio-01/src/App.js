@@ -26,6 +26,21 @@ function TopBar() {
   );
 };
 
+function SideBar() {
+  const sections = [];
+  for (var i=0;i< 12;i++){
+    {sections[i] = 'Section ' + i};
+  }
+  const renderListOfSections = (sections)=>{
+    return sections.map(section => <p>{section}</p>)
+  }
+  return (
+    <div style={{border: '1px solid rgba(0, 0, 0,0.25)'}}>
+        {renderListOfSections(sections)}
+    </div>
+  );
+}
+
 
 function AppHeader() {
   return (
@@ -51,7 +66,7 @@ function AppHeader() {
 
 function App() {
   return (
-    <AppHeader/>    
+    <SideBar/>    
   );
 }
 
