@@ -13,9 +13,23 @@ function HeaderMenu() {
   );
 };
 
+function TopBar() {
+  return (
+    <div>
+      <ul style={{ display: 'flex',justifyContent: 'center', listStyleType: 'none', padding: 0,border: '1px solid rgba(0, 0, 0,0.25)'}}>
+        <li style={{ margin: '0 10px' }}>Section 1</li>
+        <li style={{ margin: '0 10px' }}>Section 2</li>
+        <li style={{ margin: '0 10px' }}>Section 3</li>
+        <li style={{ margin: '0 10px' }}>Section 4</li>
+      </ul>
+    </div>
+  );
+};
+
+
 function AppHeader() {
   return (
-    <header style={{ display: 'flex', alignItems: 'center' }}>
+    <header style={{ display: 'flex', alignItems: 'center',border: '1px solid rgba(0, 0, 0,0.25)'}}>
       <div style={{ flex: 1 }}>
         <img src={logo} alt="Logo" style={{ height: 100 }} />
       </div>
