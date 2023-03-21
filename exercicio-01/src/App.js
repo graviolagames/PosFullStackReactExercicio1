@@ -35,9 +35,9 @@ function SideBar() {
     return sections.map(section => <p>{section}</p>)
   }
   return (
-    <div style={{border: '1px solid rgba(0, 0, 0,0.25)'}}>
-        {renderListOfSections(sections)}
-    </div>
+      <div style={{border: '1px solid rgba(0, 0, 0,0.25)'}}>
+          {renderListOfSections(sections)}
+      </div>
   );
 }
 
@@ -63,13 +63,34 @@ function AppHeader() {
   );
 }
 
+function AppBody(){
+  const LoremIpsum = "Lorem ipsum dolor sit amet, est ea fabulas scaevola. Doming scribentur ei ius. Tamquam imperdiet efficiendi duo eu. Eius volutpat sed cu, quem deserunt intellegam mel ex, ea has stet simul.";
+  return(
+    <div style={{flexDirection: 'column', alignItems: 'center',border: '1px solid rgba(0, 0, 0,0.25)', flex: 1}}>
+      <div>
+        <TopBar/>
+      </div>
+      <div style={{ display: 'flex', flexDirection: 'row'}}>
+        <div style={{ flex: 11, flexDirection: 'column' }}>
+          <Panel imageSrc = {logo} description = {LoremIpsum}/>
+          <Panel imageSrc = {logo} description = {LoremIpsum}/>  
+        </div>
+        <div style={{ flex: 1}}>
+          <SideBar/>
+        </div>
+      </div>
+    </div>
+
+  );
+}
+
 function Panel({imageSrc,description}) {
   return(
       <div style={{ display: 'flex', alignItems: 'center',border: '1px solid rgba(0, 0, 0,0.25)'}}>
-        <div style={{ flex: 1,alignItems: 'center',border: '1px solid rgba(0, 0, 0,0.25)' }}>
-          <img src={imageSrc} style={{ height: 300 }} />
+        <div style={{ alignItems: 'center',border: '1px solid rgba(0, 0, 0,0.25)'}}>
+          <img src={imageSrc} style={{ width: '20em',height:'auto' }} />
         </div>
-        <div style={{ flex: 2 }}>
+        <div>
           {description}
         </div>
           
@@ -78,9 +99,11 @@ function Panel({imageSrc,description}) {
 }
 
 function App() {
-  const LoremIpsum = "Lorem ipsum dolor sit amet, est ea fabulas scaevola. Doming scribentur ei ius. Tamquam imperdiet efficiendi duo eu. Eius volutpat sed cu, quem deserunt intellegam mel ex, ea has stet simul."
   return (
-    <Panel imageSrc = {logo} description = {LoremIpsum}/>    
+    <div>
+      <AppHeader/>
+      <AppBody/>
+    </div>
   );
 }
 
