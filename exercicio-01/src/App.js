@@ -88,7 +88,7 @@ function Panel({imageSrc,description}) {
   return(
       <div style={{ display: 'flex', alignItems: 'center',border: '1px solid rgba(0, 0, 0,0.25)'}}>
         <div style={{ alignItems: 'center',border: '1px solid rgba(0, 0, 0,0.25)'}}>
-          <img src={imageSrc} style={{ width: '20em',height:'auto' }} />
+          <img src={imageSrc} alt =  'thumb' style={{ width: '10em',height:'auto' }} />
         </div>
         <div>
           {description}
