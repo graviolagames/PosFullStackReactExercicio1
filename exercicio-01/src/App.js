@@ -1,6 +1,6 @@
 import './App.css';
 import logo from './logo.png';
-
+import thumbPlaceholder from './thumbPlaceholder.jpg';
 
 function HeaderMenu() {
   return (
@@ -28,7 +28,7 @@ function TopBar() {
 
 function SideBar() {
   const sections = [];
-  for (var i=0;i< 12;i++){
+  for (var i=1;i<= 12;i++){
     {sections[i] = 'Section ' + i};
   }
   const renderListOfSections = (sections)=>{
@@ -64,7 +64,7 @@ function AppHeader() {
 }
 
 function AppBody(){
-  const LoremIpsum = "Lorem ipsum dolor sit amet, est ea fabulas scaevola. Doming scribentur ei ius. Tamquam imperdiet efficiendi duo eu. Eius volutpat sed cu, quem deserunt intellegam mel ex, ea has stet simul.";
+  const LoremIpsum = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas at sapien ut neque rhoncus lobortis. Fusce vel libero in quam tempor dignissim. Nulla facilisi. Duis sit amet sollicitudin elit. Aliquam eget dolor in sem tristique tristique. Sed congue justo a turpis laoreet malesuada. Nam eget enim ac odio mollis ultrices. Mauris interdum ultrices felis a consequat. Donec cursus massa a est pulvinar, ut tincidunt quam accumsan.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas at sapien ut neque rhoncus lobortis. Fusce vel libero in quam tempor dignissim. Nulla facilisi. Duis sit amet sollicitudin elit. Aliquam eget dolor in sem tristique tristique. Sed congue justo a turpis laoreet malesuada. Nam eget enim ac odio mollis ultrices. Mauris interdum ultrices felis a consequat. Donec cursus massa a est pulvinar, ut tincidunt quam accumsan. Morbi maximus molestie sapien vel efficitur. Quisque molestie, urna vel mollis bibendum, nulla est sodales sem, eu hendrerit ex dolor ut quam. Integer rutrum quam a elementum aliquet. Suspendisse tincidunt eros id quam ultricies bibendum.";
   return(
     <div style={{flexDirection: 'column', alignItems: 'center',border: '1px solid rgba(0, 0, 0,0.25)', flex: 1}}>
       <div>
@@ -72,8 +72,8 @@ function AppBody(){
       </div>
       <div style={{ display: 'flex', flexDirection: 'row'}}>
         <div style={{ flex: 11, flexDirection: 'column' }}>
-          <Panel imageSrc = {logo} description = {LoremIpsum}/>
-          <Panel imageSrc = {logo} description = {LoremIpsum}/>  
+          <Panel imageSrc = {thumbPlaceholder} description = {LoremIpsum}/>
+          <Panel imageSrc = {thumbPlaceholder} description = {LoremIpsum}/>  
         </div>
         <div style={{ flex: 1}}>
           <SideBar/>
@@ -88,7 +88,7 @@ function Panel({imageSrc,description}) {
   return(
       <div style={{ display: 'flex', alignItems: 'center',border: '1px solid rgba(0, 0, 0,0.25)'}}>
         <div style={{ alignItems: 'center',border: '1px solid rgba(0, 0, 0,0.25)'}}>
-          <img src={imageSrc} alt =  'thumb' style={{ width: '10em',height:'auto' }} />
+          <img src={imageSrc} alt =  'thumb' style={{ width: '20em',height:'auto' }} />
         </div>
         <div>
           {description}
