@@ -16,7 +16,7 @@ function HeaderMenu() {
 function TopBar() {
   return (
     <div>
-      <ul style={{ display: 'flex',justifyContent: 'center', listStyleType: 'none', padding: 0,border: '1px solid rgba(0, 0, 0,0.25)'}}>
+      <ul style={{ display: 'flex',justifyContent: 'center', listStyleType: 'none', padding: 0}}>
         <li style={{ margin: '0 10px' }}>Section 1</li>
         <li style={{ margin: '0 10px' }}>Section 2</li>
         <li style={{ margin: '0 10px' }}>Section 3</li>
@@ -35,7 +35,7 @@ function SideBar() {
     return sections.map(section => <p>{section}</p>)
   }
   return (
-      <div style={{border: '1px solid rgba(0, 0, 0,0.25)'}}>
+      <div style={{margin: '5px',border: '1px solid rgba(0, 0, 0,0.25)'}}>
           {renderListOfSections(sections)}
       </div>
   );
@@ -86,11 +86,11 @@ function AppBody(){
 
 function Panel({imageSrc,description}) {
   return(
-      <div style={{ display: 'flex', alignItems: 'center',border: '1px solid rgba(0, 0, 0,0.25)'}}>
-        <div style={{ alignItems: 'center',border: '1px solid rgba(0, 0, 0,0.25)'}}>
-          <img src={imageSrc} alt =  'thumb' style={{ width: '20em',height:'auto' }} />
+      <div style={{ display: 'flex', alignItems: 'center', border: '1px solid rgba(0, 0, 0,0.25)'}}>
+        <div style={{ alignItems: 'center',margin: '10px',border: '1px solid rgba(0, 0, 0,0.25)'}}>
+          <img src={imageSrc} alt =  'thumb' style={{ margin: '20px',width: '20em',height:'auto' }} />
         </div>
-        <div>
+        <div style={{margin: '20px'}}>
           {description}
         </div>
           
